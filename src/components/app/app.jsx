@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import FlatList from '../flat-list/flat-list';
+
 import './app.scss'
 
 class App extends Component {
@@ -6,6 +8,7 @@ class App extends Component {
 		return(
 			<>
 				<div className="left-scene">
+					<FlatList />
 				</div>
 				<div className="right-scene">
 				</div>
