@@ -3,7 +3,14 @@ import './app.scss'
 
 class App extends Component {
 	render(){
-		return null;
+		return(
+			<>
+				<div className="left-scene">
+				</div>
+				<div className="right-scene">
+				</div>
+			</>
+		)
 	}
 }
 
