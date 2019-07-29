@@ -1,5 +1,6 @@
 import React from 'react';
 import Flats from '../../../data/flats';
+import Flat from '../flat/flat'
 import './flat-list.scss'
 
 class FlatList extends React.Component {
@@ -11,8 +12,7 @@ class FlatList extends React.Component {
 	}
 	
 	displayFlats(){
-		//Implement this after Flat Component is created
-		//this.state.flats.map(flat => )
+		return this.state.flats.map( (flat) => <Flat name={flat.name} price={flat.price} priceCurrency={flat.priceCurrency} imageUrl={flat.imageUrl} />)
 	}
 
 	componentWillMount(){
@@ -26,7 +26,7 @@ class FlatList extends React.Component {
 	render(){
 		console.log('COMPONENT WILL RENDER')
 		console.log(this.state.flats)
-		return null;
+		return this.displayFlats();
 	}
 }
 
