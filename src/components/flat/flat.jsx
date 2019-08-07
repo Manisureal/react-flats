@@ -5,16 +5,16 @@ class Flat extends React.Component {
 	render(){
 
 	  const imgUrl = {
-        backgroundImage: `url(${this.props.imageUrl})`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(${this.props.imageUrl})`,
         backgroundPosition: 'center',
   		backgroundSize: 'cover',
   		backgroundRepeat: 'no-repeat'
       };
 
 	  return(
-	  	<div className="flat" style={imgUrl}>
-	  	  <p>{ this.props.priceCurrency + this.props.price }</p>
-	  	  <p>{ this.props.name }</p>
+	  	<div className='flat' style={imgUrl}>
+	  	  <p className='flat-price'>{ this.props.priceCurrency + " " + this.props.price }</p>
+	  	  <p className='flat-name'>{ this.props.name }</p>
 	  	  { <img /> }
 	  	</div>
 	  );

@@ -2,4 +2,17 @@
   height: 250px;
   margin-bottom: 10px;
   color:white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
+
+  .flat-price {
+  	flex-grow:1;
+  }
+
+  .flat-name {
+  	font-weight:bold;
+  	font-size:1.5em;
+  }
 }
