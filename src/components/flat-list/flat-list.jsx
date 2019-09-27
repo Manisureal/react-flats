@@ -7,10 +7,15 @@ class FlatList extends React.Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			flats: Flats
+			flats: Flats,
 		}
+		this.flatsCallbackToParent()
 	}
-	
+
+	flatsCallbackToParent = () => {
+		this.props.getFlatsCallback(this.state.flats)
+	}
+
 	displayFlats(){
 		return this.state.flats.map( (flat) => <Flat name={flat.name} price={flat.price} priceCurrency={flat.priceCurrency} imageUrl={flat.imageUrl} />)
 	}

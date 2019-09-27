@@ -2,8 +2,11 @@ import React from 'react';
 import './flat.scss';
 
 class Flat extends React.Component {
-	render(){
+	handleClick(item) {
+		// console.log(item)
+	}
 
+	render(){
 	  const imgUrl = {
         backgroundImage: `linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(${this.props.imageUrl})`,
         backgroundPosition: 'center',
@@ -12,7 +15,7 @@ class Flat extends React.Component {
       };
 
 	  return(
-	  	<div className='flat' style={imgUrl}>
+	  	<div className='flat' style={imgUrl} onClick={this.handleClick(this)}>
 	  	  <p className='flat-price'>{ this.props.priceCurrency + " " + this.props.price }</p>
 	  	  <p className='flat-name'>{ this.props.name }</p>
 	  	  { <img /> }
